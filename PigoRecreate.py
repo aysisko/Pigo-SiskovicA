@@ -4,6 +4,12 @@ import time
 
 class Pigo:
 
+######
+######BASIC STATUS AND METHODS
+######
+
+
+    status = {'ismoving' : False, 'servo' : 90, 'leftspeed' : 175, 'rightspeed' : 175}
     isMoving = False
     servoPos = 90
 
@@ -22,6 +28,15 @@ class Pigo:
         while fwd() != 1:
             time.sleep(.1)
             print "Can't do the vroom vroom."
+
+
+######
+######COMPLEX METHODS
+######
+
+######
+######MAIN APP STARTS HERE
+######
 
 tina = Pigo()
 tina.fwd()
