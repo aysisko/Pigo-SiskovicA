@@ -1,5 +1,5 @@
 __author__ = 'siskovica'
-from GoPiGo import *
+from gopigo import *
 import time
 
 class Pigo:
