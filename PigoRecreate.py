@@ -36,7 +36,7 @@ class Pigo:
         if self.status['dist'] < STOP_DIST:
             print "Obstacle withtin stop distance"
             return False
-        elif volt() > 14 of volt() < 6:
+        elif volt() > 14 or volt() < 6:
             print "Voltage Outside of Safe Range: " + str(volt())
             return False
         else:
