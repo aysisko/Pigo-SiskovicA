@@ -1,7 +1,8 @@
 #__author__ = 'siskovica'
 from gopigo import *
 import time
-STOP_DIST = 50
+STOP_DIST = 200
+
 
 class Pigo:
 
@@ -35,7 +36,7 @@ class Pigo:
 #Check if conditions are safe for Pigo to continue
     def keepGoing(self):
         if self.status['dist'] < STOP_DIST:
-            print "Obstacle withtin stop distance"
+            print "Obstacle within stop distance"
             return False
         elif volt() > 14 or volt() < 6:
             print "Voltage Outside of Safe Range: " + str(volt())
