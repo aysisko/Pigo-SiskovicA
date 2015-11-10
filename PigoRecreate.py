@@ -1,6 +1,7 @@
 #__author__ = 'siskovica'
 from gopigo import *
 import time
+STOP_DIST = 50
 
 class Pigo:
 
@@ -8,7 +9,7 @@ class Pigo:
 ######BASIC STATUS AND METHODS
 ######
 
-    STOP_DIST = 50
+
 
     status = {'ismoving' : False, 'servo' : 90, 'leftspeed' : 175, 'rightspeed':175, 'dist': 100}
     isMoving = False
