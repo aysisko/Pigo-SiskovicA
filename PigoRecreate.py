@@ -1,4 +1,4 @@
-__author__ = 'siskovica'
+#__author__ = 'siskovica'
 from gopigo import *
 import time
 
@@ -36,7 +36,7 @@ class Pigo:
         if self.status['dist'] < STOP_DIST:
             print "Obstacle withtin stop distance"
             return False
-        elif volt() > 14 of volt() < 6
+        elif volt() > 14 of volt() < 6:
             print "Voltage Outside of Safe Range: " + str(volt())
             return False
         else:
@@ -49,7 +49,7 @@ class Pigo:
 ######
 ######ADVANCED METHODS
 ######
-    def self.spin(degree)
+    #def self.spin(degree)
 
     def dance(self):
         print "I just want to DANCE!"
