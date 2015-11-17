@@ -86,11 +86,17 @@ class Pigo:
             time.sleep(.5)
         self.stop()
 
+    def shakeServo(self):
+        for x in range(3):
+            self.servoSweep()
+            print "I whip my hair back and forth"
+            time.sleep(1)
+
     def dance(self):
         print "I just want to DANCE!"
         self.spin()
         self.shuffle()
-        #self.shakeServo()
+        self.shakeServo()
         #self.rturn()
         #self.lturn()
         #self.blink()
