@@ -68,11 +68,7 @@ class Pigo:
         for x in range(3):
             right_rot()
         time.sleep(2)
-        self.stop()
-
-    def blink(self):
-        led_on() and led_off()
-            for x in
+        self.stop() 
 
     def dance(self):
         print "I just want to DANCE!"
