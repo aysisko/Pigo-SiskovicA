@@ -16,7 +16,7 @@ class Pigo:
 
     def __init__(self):
         print "I'm a little robot car. beep beep."
-        self.status['dist'] = us_dist(15)
+        self.checkDist()
 
 #named after the GoPiGo version of stop()
     def stop(self):
@@ -65,15 +65,14 @@ class Pigo:
     def spin(self):
         right_rot()
             for x in range(3):
-        time.sleep(5)
+            time.sleep()
 
     def blink(self):
-        led_on()
-        led_off()
-            for x in 
+        led_on() and led_off()
+            for x in
 
-    #def dance(self):
-       # print "I just want to DANCE!"
+    def dance(self):
+        print "I just want to DANCE!"
         #self.spin()
         #self.shuffle()
         #self.shakeServo()
@@ -87,11 +86,5 @@ tina = Pigo()
 
 while tina.keepGoing():
     tina.checkDist()
-    tina = Pigo()
-    tina.fwd()
-    if tina.keepGoing() == False:
-        break
-    time.sleep(2)
-    tina.stop()
-
+    tina.safeDrive()
 tina.stop()
