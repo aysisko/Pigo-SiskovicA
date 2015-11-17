@@ -37,7 +37,7 @@ class Pigo:
         self.status["isMoving"] = True
         print "Back it up!"
         for x in range(3):
-            stop()
+            bwd()
 
 #Check if conditions are safe for Pigo to continue
     def keepGoing(self):
