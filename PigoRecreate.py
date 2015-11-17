@@ -65,9 +65,10 @@ class Pigo:
                 time.sleep(.1)
 
     def spin(self):
-        right_rot()
-            for x in range(3):
-            time.sleep()
+        for x in range(3):
+            right_rot()
+        time.sleep(2)
+        self.stop()
 
     def blink(self):
         led_on() and led_off()
