@@ -72,16 +72,18 @@ class Pigo:
         time.sleep(2)
         self.stop()
 
-    #def shuffle(self):
-        #for x in range(5):
-            #self.fwd()
-            #self.bwd()
-
+    def shuffle(self):
+        for x in range(5):
+            self.fwd()
+            time.sleep(.5)
+            self.bwd()
+            time.sleep(.5)
+        self.stop()
 
     def dance(self):
         print "I just want to DANCE!"
         self.spin()
-        #self.shuffle()
+        self.shuffle()
         #self.shakeServo()
         #self.rturn()
         #self.lturn()
