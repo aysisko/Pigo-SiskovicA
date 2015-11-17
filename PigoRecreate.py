@@ -61,10 +61,16 @@ class Pigo:
             if ang % 15 == 0:
                 servo(ang)
                 time.sleep(.1)
-    def spin():
+
+    def spin(self):
         right_rot()
             for x in range(3):
-        time.sleep()
+        time.sleep(5)
+
+    def blink(self):
+        led_on()
+        led_off()
+            for x in 
 
     #def dance(self):
        # print "I just want to DANCE!"
