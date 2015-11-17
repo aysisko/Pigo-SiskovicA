@@ -33,6 +33,12 @@ class Pigo:
         for x in range(3):
             fwd()
 
+    def bwd(self):
+        self.status["isMoving"] = True
+        print "Back it up!"
+        for x in range(3):
+            stop()
+
 #Check if conditions are safe for Pigo to continue
     def keepGoing(self):
         if self.status['dist'] < STOP_DIST:
@@ -92,5 +98,4 @@ class Pigo:
 ######MAIN APP STARTS HERE
 ######
 tina = Pigo()
-
 tina.dance()
