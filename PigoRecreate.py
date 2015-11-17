@@ -89,7 +89,7 @@ class Pigo:
     def shakeServo(self):
         for x in range(3):
             self.servoSweep()
-            print "I whip my hair back and forth"
+            print "Do the sprinkler"
             time.sleep(1)
 
     def dance(self):
@@ -105,3 +105,4 @@ class Pigo:
 ######
 tina = Pigo()
 tina.dance()
+tina.stop()
