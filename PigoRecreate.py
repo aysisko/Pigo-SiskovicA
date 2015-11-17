@@ -52,7 +52,7 @@ class Pigo:
 ######ADVANCED METHODS
 ######
     #def self.spin(degree)
-    def saveDrive(self):
+    def safeDrive(self):
         self.fwd()
         while self.keepGoing():
             self.checkDist()
@@ -68,7 +68,7 @@ class Pigo:
         for x in range(3):
             right_rot()
         time.sleep(2)
-        self.stop() 
+        self.stop()
 
     def dance(self):
         print "I just want to DANCE!"
