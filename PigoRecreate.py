@@ -36,7 +36,7 @@ class Pigo:
         if self.status['dist'] < STOP_DIST:
             print "Obstacle withtin stop distance"
             return False
-        elif volt() > 14 of volt() < 6:
+        elif volt() > 14 or volt() < 6:
             print "Voltage Outside of Safe Range: " + str(volt())
             return False
         else:
@@ -50,15 +50,30 @@ class Pigo:
 ######ADVANCED METHODS
 ######
     #def self.spin(degree)
+    def saveDrive(self):
+        self.fwd()
+        while self.keepGoing():
+            self.checkDist()
+        self.stop()
 
-    def dance(self):
-        print "I just want to DANCE!"
-        self.spin()
-        self.shuffle()
-        self.shakeServo()
-        self.rturn()
-        self.lturn()
-        self.blink()
+    def servoSweep(self):
+        for ang in range(20, 160, 5):
+            if ang % 15 == 0:
+                servo(ang)
+                time.sleep(.1)
+    def spin():
+        right_rot()
+            for x in range(3):
+        time.sleep()
+
+    #def dance(self):
+       # print "I just want to DANCE!"
+        #self.spin()
+        #self.shuffle()
+        #self.shakeServo()
+        #self.rturn()
+        #self.lturn()
+        #self.blink()
 ######
 ######MAIN APP STARTS HERE
 ######
