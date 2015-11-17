@@ -24,7 +24,7 @@ class Pigo:
     def stop(self):
         self.status["isMoving"] = False
         print "STOP get jiggy with it"
-        for x in range(3):
+        for x in range(8):
             stop()
 
     def fwd(self):
@@ -56,6 +56,8 @@ class Pigo:
         self.fwd()
         while self.keepGoing():
             self.checkDist()
+            if 'dist' < 200:
+                self.stop()
         self.stop()
 
     def servoSweep(self):
@@ -70,9 +72,15 @@ class Pigo:
         time.sleep(2)
         self.stop()
 
+    #def shuffle(self):
+        #for x in range(5):
+            #self.fwd()
+            #self.bwd()
+
+
     def dance(self):
         print "I just want to DANCE!"
-        #self.spin()
+        self.spin()
         #self.shuffle()
         #self.shakeServo()
         #self.rturn()
@@ -83,7 +91,4 @@ class Pigo:
 ######
 tina = Pigo()
 
-while tina.keepGoing():
-    tina.checkDist()
-    tina.safeDrive()
-tina.stop()
+tina.dance()
