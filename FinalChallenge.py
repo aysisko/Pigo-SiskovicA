@@ -11,11 +11,13 @@ __author__ = 'Owner'
 from gopigo import *
 import time
 
-class pigo:
+class Pigo:
 
     status = {'ismoving' : False, 'servo' : 90, 'leftspeed' : 100, 'rightspeed' : 100, 'dist' : 100}
     isMoving = False
     servoPos = 90
+    MIN_DIST = 30		#Distance from obstacle where the GoPiGo should stop
+    vision = [None] * 180
 
     def __init__(self):
             print "I'm a little robot car. beep beep."
@@ -35,8 +37,9 @@ class pigo:
             for x in range(3):
                 bwd()
 
-    vision = []
-
+    ######
+    ##COMPLEX METHODS
+    ######
     def servoSweep(self):
         for ang in range(20, 160, 2):
             servo(ang)
@@ -97,13 +100,9 @@ class pigo:
             if 'dist' < 30:
                 self.stop()
 
-
-
-    distance_to_stop = 30		#Distance from obstacle where the GoPiGo should stop
-
-    def findPathRight(dist):
-        safeDrive()
-        if dist < distance_to_stop:
+    def findPathRight(self):
+        self.safeDrive()
+        if self.status('dist') < self.MIN_DIST:
             self.bwd()
             self.stop()
             time.sleep(.5)
@@ -111,7 +110,8 @@ class pigo:
             self.checkSpan()
             self.fwd()
         else:
-            safeDrive()
+            self.safeDrive()
 
-tina = pigo()
+tina = Pigo()
 tina.findPathRight()
+
