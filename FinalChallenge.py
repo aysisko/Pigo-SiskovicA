@@ -102,7 +102,7 @@ class pigo:
     distance_to_stop = 30		#Distance from obstacle where the GoPiGo should stop
 
     def findPathRight(dist):
-        self.safeDrive()
+        safeDrive()
         if dist < distance_to_stop:
             self.bwd()
             self.stop()
@@ -111,7 +111,7 @@ class pigo:
             self.checkSpan()
             self.fwd()
         else:
-            self.SafeDrive()
+            safeDrive()
 
 tina = pigo()
 tina.findPathRight()
