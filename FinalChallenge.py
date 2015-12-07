@@ -16,7 +16,7 @@ import math
 
 class pigo:
 
-status = {'ismoving' : False, 'servo' : 90, 'leftspeed' : 100, 'rightspeed':100, 'dist': 100}
+status = {'ismoving' : False, 'servo' : 90, 'leftspeed' : 100, 'rightspeed' : 100, 'dist' : 100}
 isMoving = False
 servoPos = 90
 
