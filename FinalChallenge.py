@@ -68,7 +68,7 @@ class pigo:
             left_rot()
             time.sleep(.5)
             self.stop()
-         if ang > 151 and ang < 180:
+        if ang > 151 and ang < 180:
             left_rot()
             time.sleep(.1)
             self.stop()
