@@ -113,5 +113,5 @@ class pigo:
         else:
             self.SafeDrive()
 
-tina = Pigo()
+tina = pigo()
 tina.findPathRight()
