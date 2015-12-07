@@ -48,27 +48,27 @@ class pigo:
             print "Checking for obstacles!"
 
     def turnTo(self):
-        if ang < 30 and ang > 0
+        if ang < 30 and ang > 0:
             right_rot()
             time.sleep(1)
             self.stop()
-        if ang < 60 and ang > 31
+        if ang < 60 and ang > 31:
             right_rot()
             time.sleep(.5)
             self.stop()
-        if ang < 90 and ang > 61
+        if ang < 90 and ang > 61:
             right_rot()
             time.sleep(.2)
             self.stop()
-        if ang > 90 and < 120
+        if ang > 90 and < 120:
             left_rot()
             time.sleep(.2)
             self.stop()
-        if ang > 121 and < 150
+        if ang > 121 and < 150:
             left_rot()
             time.sleep(.5)
             self.stop()
-         if ang > 151 and < 180
+         if ang > 151 and < 180:
             left_rot()
             time.sleep(.1)
             self.stop()
@@ -84,7 +84,7 @@ class pigo:
             else:
                 counter = 0
                 print "Looking for a clear path."
-            if counter == 20
+            if counter == 20:
                 print "Let's Go!"
                 self.turnTo()
                 return ang
