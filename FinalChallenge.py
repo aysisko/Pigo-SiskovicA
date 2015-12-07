@@ -16,9 +16,9 @@ import math
 
 class pigo:
 
- status = {'ismoving' : False, 'servo' : 90, 'leftspeed' : 100, 'rightspeed':100, 'dist': 100}
-    isMoving = False
-    servoPos = 90
+status = {'ismoving' : False, 'servo' : 90, 'leftspeed' : 100, 'rightspeed':100, 'dist': 100}
+isMoving = False
+servoPos = 90
 
     def __init__(self):
             print "I'm a little robot car. beep beep."
