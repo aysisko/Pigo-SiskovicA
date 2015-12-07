@@ -10,9 +10,6 @@ __author__ = 'Owner'
 ########################################################################
 from gopigo import *
 import time
-import sys
-from collections import counter
-import math
 
 class pigo:
 
