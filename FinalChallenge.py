@@ -102,6 +102,7 @@ class Pigo:
 
     def findPathRight(self):
         self.safeDrive()
+        print "Running safeDrive."
         if self.status['dist'] < self.MIN_DIST:
             self.bwd()
             self.stop()
@@ -112,6 +113,7 @@ class Pigo:
         else:
             self.safeDrive()
 
+#Main APP starts here
 tina = Pigo()
 tina.findPathRight()
 
