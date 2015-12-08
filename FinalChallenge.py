@@ -102,7 +102,7 @@ class Pigo:
 
     def findPathRight(self):
         self.safeDrive()
-        if self.status('dist') < self.MIN_DIST:
+        if self.status['dist'] < self.MIN_DIST:
             self.bwd()
             self.stop()
             time.sleep(.5)
