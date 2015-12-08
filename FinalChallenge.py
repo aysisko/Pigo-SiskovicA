@@ -26,16 +26,19 @@ class Pigo:
             self.status["isMoving"] = False
             for x in range(8):
                 stop()
+            print "Stop"
 
     def fwd(self):
             self.status["isMoving"] = True
             for x in range(3):
                 fwd()
+            print "Forward"
 
     def bwd(self):
             self.status["isMoving"] = True
             for x in range(3):
                 bwd()
+            print "Back it up"
 
     ######
     ##COMPLEX METHODS
@@ -97,7 +100,7 @@ class Pigo:
         self.fwd()
         while self.fwd():
             self.checkDist()
-            if 'dist' < 30:
+            if 'dist' < 10:
                 self.stop()
 
     def findPathRight(self):
