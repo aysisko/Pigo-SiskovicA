@@ -131,6 +131,7 @@ class Pigo:
         self.status['dist'] = us_dist(15)
         print "I see something" + str(self.status['dist']) + "mm away."
         if self.status['dist'] < self.MIN_DIST:
+            self.stop()
             return False
         else:
             return True
@@ -138,12 +139,10 @@ class Pigo:
     def safeDrive(self):
         self.fwd()
         while self.checkDist():
-            time.sleep(.05)
+            time.sleep(2)
         self.stop()
 
     def avoider(self):
-        self.safeDrive()
-        print "Running safeDrive."
         if self.status['dist'] < self.MIN_DIST:
             self.bwd()
             self.stop()
@@ -151,7 +150,7 @@ class Pigo:
             self.servoSweep()
             self.checkSpan()
             self.turnTo()
-            self.fwd()
+            self.safeDrive()
         else:
             self.safeDrive()
 
