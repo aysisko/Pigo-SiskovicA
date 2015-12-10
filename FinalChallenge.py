@@ -150,6 +150,7 @@ class Pigo:
             time.sleep(.5)
             self.servoSweep()
             self.checkSpan()
+            self.turnTo()
             self.fwd()
         else:
             self.safeDrive()
@@ -158,12 +159,8 @@ class Pigo:
 tina = Pigo()
 
 while True:
-    if tina.checkDist():
+    if tina.checkDist() == True:
         tina.safeDrive()
     else:
-        tina.servoSweep()
-        if tina.checkSpan():
-            tina.turnTo()
-        else:
-            tina.turnAround()
+      tina.avoider()
 
