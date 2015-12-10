@@ -136,23 +136,26 @@ class Pigo:
         else:
             return True
 
+    def avoider(self):
+            if self.status['dist'] < self.MIN_DIST:
+                self.bwd()
+                self.stop()
+                time.sleep(.5)
+                self.servoSweep()
+                self.checkSpan()
+                self.turnTo()
+                self.safeDrive()
+            else:
+                self.safeDrive()
+
     def safeDrive(self):
         self.fwd()
-        while self.checkDist():
-            time.sleep(2)
-        self.stop()
-
-    def avoider(self):
-        if self.status['dist'] < self.MIN_DIST:
-            self.bwd()
-            self.stop()
-            time.sleep(.5)
-            self.servoSweep()
-            self.checkSpan()
-            self.turnTo()
-            self.safeDrive()
-        else:
-            self.safeDrive()
+        time.sleep(2)
+        self.checkDist():
+            if self.checkDist() == False
+                self.avoider()
+            else:
+                self.safeDrive()
 
 #Main APP starts here
 tina = Pigo()
