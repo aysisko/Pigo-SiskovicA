@@ -150,7 +150,6 @@ class Pigo:
 
     def safeDrive(self):
         self.fwd()
-        time.sleep(2)
         self.checkDist()
         if self.checkDist() == False:
             self.avoider()
